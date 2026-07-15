@@ -35,3 +35,31 @@ function submitDeposit() {
     document.querySelector('input[type="number"]').value = "";
     document.querySelector('input[type="text"]').value = "";
 }
+function loadHistory() {
+
+    const historyList = document.getElementById("historyList");
+
+    if (!historyList) return;
+
+    const deposits = JSON.parse(localStorage.getItem("deposits") || "[]");
+
+    if (deposits.length === 0) {
+        historyList.innerHTML = "<p>No transactions found.</p>";
+        return;
+    }
+
+    historyList.innerHTML = "";
+
+    deposits.forEach((item) => {
+        historyList.innerHTML += `
+            <div class="card" style="margin-top:15px;">
+                <p><strong>Amount:</strong> $${item.amount}</p>
+                <p><strong>Method:</strong> ${item.method}</p>
+                <p><strong>Date:</strong> ${item.date}</p>
+            </div>
+        `;
+    });
+
+}
+
+loadHistory();
