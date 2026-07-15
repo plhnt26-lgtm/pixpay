@@ -249,3 +249,28 @@ footer{
     flex-direction:column;
 }
     }
+/* Header */
+
+header{
+    background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+header h1{
+    color:#fff;
+    font-size:34px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d4af37;
+    }
