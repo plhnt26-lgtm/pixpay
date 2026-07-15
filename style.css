@@ -249,3 +249,34 @@ footer{
     color:#d4af37;
     text-decoration:none;
 }
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:60px;
+}
+
+.card{
+background:linear-gradient(145deg,#1b1b1b,#2b1055);
+border:2px solid #d4af37;
+border-radius:20px;
+padding:30px;
+text-align:center;
+box-shadow:0 0 20px rgba(212,175,55,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(212,175,55,.5);
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.card h1{
+color:#fff;
+font-size:38px;
+}
