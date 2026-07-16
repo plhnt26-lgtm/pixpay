@@ -327,3 +327,69 @@ footer{
     background:#111;
     color:#fff;
 }
+/* ===== Modern Header ===== */
+
+header{
+    background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+header h1{
+    color:#fff;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#5b21b6;
+    color:#d4af37;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+header h1{
+    margin-bottom:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+nav a{
+    font-size:15px;
+    padding:8px 12px;
+}
+
+}
