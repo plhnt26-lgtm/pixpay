@@ -393,3 +393,23 @@ nav a{
 }
 
 }
+/* Hero Buttons */
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #5b21b6;
+    color:#5b21b6;
+}
+
+.btn-outline:hover{
+    background:#5b21b6;
+    color:#fff;
+}
