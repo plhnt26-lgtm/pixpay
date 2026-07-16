@@ -444,3 +444,180 @@ footer{
     padding:20px;
     }
     
+/* ===== Profile / Deposit / Withdraw ===== */
+
+.form-card{
+    background:#1b1b1b;
+    border:2px solid #d4af37;
+    border-radius:18px;
+    padding:30px;
+    max-width:600px;
+    margin:30px auto;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+.form-card h2{
+    color:#d4af37;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    background:#222;
+    color:#fff;
+    border:1px solid #444;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus{
+    border:2px solid #d4af37;
+    outline:none;
+}
+
+.form-card button{
+    width:100%;
+    margin-top:15px;
+}
+
+/* ===== Transaction Table ===== */
+
+.table-box{
+    background:#1b1b1b;
+    border:2px solid #d4af37;
+    border-radius:18px;
+    padding:20px;
+    margin-top:30px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#5b21b6;
+    color:#fff;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    border-bottom:1px solid #333;
+    text-align:center;
+}
+
+table tr:hover{
+    background:#222;
+}
+
+/* ===== Status ===== */
+
+.status-success{
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.status-pending{
+    color:#ffd700;
+    font-weight:bold;
+}
+
+.status-failed{
+    color:#ff4444;
+    font-weight:bold;
+    }
+/* ===== Dashboard Statistics ===== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.stat-card{
+    background:linear-gradient(135deg,#1b1b1b,#2b1055);
+    border:2px solid #d4af37;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+}
+
+.stat-card h4{
+    color:#d4af37;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.stat-card h2{
+    color:#fff;
+    font-size:36px;
+}
+
+/* ===== Recent Activity ===== */
+
+.activity-box{
+    background:#1b1b1b;
+    border:2px solid #d4af37;
+    border-radius:18px;
+    padding:25px;
+    margin-top:30px;
+}
+
+.activity-box h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.activity-item{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #333;
+}
+
+.activity-item:last-child{
+    border-bottom:none;
+}
+
+.activity-item span:first-child{
+    color:#fff;
+}
+
+.activity-item span:last-child{
+    color:#00ff99;
+    font-weight:bold;
+}
+
+/* ===== Welcome Banner ===== */
+
+.banner{
+    background:linear-gradient(90deg,#5b21b6,#2b1055,#111);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.banner h1{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.banner p{
+    color:#ddd;
+}
