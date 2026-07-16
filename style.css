@@ -1,527 +1,50 @@
-/* ===== PIX PAY NEW THEME ===== */
+/* ===== PIX PAY CSS ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
 body{
-    background:#0b0b0f;
+    background:#0d0d0d;
     color:#fff;
 }
 
+/* Header */
+
 header{
     background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
-    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
 }
 
 header h1{
     color:#fff;
+    font-size:32px;
 }
 
 nav a{
     color:#fff;
     text-decoration:none;
-    margin:0 12px;
+    margin-left:20px;
     font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#d4af37;
 }
 
-.hero{
-    background:linear-gradient(135deg,#2b1055,#111,#000);
-    color:#fff;
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero h1{
-    color:#d4af37;
-    font-size:60px;
-}
-
-.hero p{
-    color:#ddd;
-}
-
-.login-box,
-.card,
-.plan-card{
-    background:#181818;
-    border:2px solid #d4af37;
-    color:#fff;
-    border-radius:18px;
-}
-
-button{
-    background:#5b21b6;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-}
-
-button:hover{
-    background:#d4af37;
-    color:#000;
-}
-
-input{
-    background:#222;
-    color:#fff;
-    border:1px solid #444;
-}
-
-input:focus{
-    border:2px solid #d4af37;
-}
-
-footer{
-    background:#111;
-    color:#fff;
-    border-top:2px solid #d4af37;
-    padding:20px;
-}
-/* ===== Glass Effect ===== */
-
-.login-box,
-.card,
-.plan-card{
-    background:rgba(30,30,30,.9);
-    backdrop-filter:blur(12px);
-    box-shadow:0 10px 30px rgba(0,0,0,.5);
-}
-
-/* ===== Dashboard Cards ===== */
-
-.card{
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(212,175,55,.5);
-}
-
-/* ===== Buttons ===== */
-
-button{
-    background:linear-gradient(45deg,#5b21b6,#7c3aed);
-    font-weight:bold;
-    transition:.3s;
-}
-
-button:hover{
-    background:linear-gradient(45deg,#d4af37,#ffd700);
-    color:#000;
-    transform:scale(1.05);
-}
-
-/* ===== Inputs ===== */
-
-input{
-    border:2px solid transparent;
-    transition:.3s;
-}
-
-input:focus{
-    border:2px solid #d4af37;
-    box-shadow:0 0 15px rgba(212,175,55,.5);
-}
-
-/* ===== Sidebar ===== */
-
-.sidebar{
-    box-shadow:5px 0 20px rgba(0,0,0,.5);
-}
-
-.sidebar a{
-    border-left:4px solid transparent;
-}
-
-.sidebar a:hover{
-    border-left:4px solid #d4af37;
-}
-
-/* ===== Hero ===== */
-
-.hero{
-    background:linear-gradient(135deg,#2b1055,#111,#000);
-}
-
-.hero h1{
-    text-shadow:0 0 20px rgba(212,175,55,.6);
-}
-
-/* ===== Footer ===== */
-
-footer{
-    background:#111;
-    border-top:2px solid #d4af37;
-}
-/* ===== Background Animation ===== */
-
-body{
-    background:linear-gradient(-45deg,#0b0b0f,#2b1055,#111,#1b1b1b);
-    background-size:400% 400%;
-    animation:bgMove 12s ease infinite;
-}
-
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-/* ===== Card Glow ===== */
-
-.card,
-.plan-card,
-.login-box{
-    transition:.4s;
-}
-
-.card:hover,
-.plan-card:hover,
-.login-box:hover{
-    box-shadow:0 0 30px #d4af37;
-    transform:translateY(-10px);
-}
-
-/* ===== Neon Buttons ===== */
-
-button{
-    background:#5b21b6;
-    color:#fff;
-    box-shadow:0 0 15px #5b21b6;
-}
-
-button:hover{
-    background:#d4af37;
-    color:#000;
-    box-shadow:0 0 25px #d4af37;
-}
-
-/* ===== Input Style ===== */
-
-input{
-    transition:.3s;
-}
-
-input:focus{
-    box-shadow:0 0 15px #d4af37;
-}
-
-/* ===== Logo ===== */
-
-header h1,
-.sidebar h2{
-    text-shadow:0 0 15px #d4af37;
-}
-
-/* ===== Smooth ===== */
-
-*{
-    scroll-behavior:smooth;
-}
-/* ===== Premium Theme ===== */
-
-/* Sidebar */
-.sidebar{
-    background:linear-gradient(180deg,#1a1a2e,#0f0f1a);
-    box-shadow:5px 0 20px rgba(0,0,0,.5);
-}
-
-.sidebar a{
-    border-radius:10px;
-    margin:8px 12px;
-}
-
-.sidebar a:hover{
-    background:linear-gradient(90deg,#5b21b6,#7c3aed);
-    color:#fff;
-}
-
-/* Topbar */
-.topbar{
-    background:rgba(20,20,20,.9);
-    backdrop-filter:blur(10px);
-    box-shadow:0 8px 20px rgba(0,0,0,.4);
-}
-
-/* Dashboard Cards */
-.card{
-    background:linear-gradient(145deg,#181818,#2b1055);
-    overflow:hidden;
-    position:relative;
-}
-
-.card::before{
-    content:"";
-    position:absolute;
-    top:-50%;
-    left:-50%;
-    width:200%;
-    height:200%;
-    background:linear-gradient(45deg,transparent,#d4af37,transparent);
-    transform:rotate(25deg);
-    opacity:.08;
-}
-/* ===== Premium Effects ===== */
-
-/* Glass Cards */
-.card,
-.plan-card,
-.login-box{
-    background:rgba(22,22,22,.85);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(212,175,55,.4);
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
-}
-
-/* Floating Animation */
-@keyframes floating{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
-    100%{transform:translateY(0);}
-}
-
-.card:hover,
-.plan-card:hover{
-    animation:floating 1.2s infinite;
-}
-
-/* Neon Title */
-.hero h1,
-.sidebar h2{
-    color:#ffd700;
-    text-shadow:
-        0 0 10px #ffd700,
-        0 0 20px #ffd700,
-        0 0 35px #5b21b6;
-}
-
-/* Premium Buttons */
-button{
-    background:linear-gradient(135deg,#5b21b6,#7c3aed);
-    border:none;
-    border-radius:12px;
-    transition:.35s;
-}
-
-button:hover{
-    background:linear-gradient(135deg,#d4af37,#ffd700);
-    color:#000;
-    transform:scale(1.08);
-}
-
-/* Dashboard Numbers */
-.card h1{
-   /* ===== Premium Gold Theme ===== */
-
-:root{
-    --gold:#FFD700;
-    --purple:#6d28d9;
-    --dark:#0b0b0f;
-}
-
-/* Logo Animation */
-header h1,
-.sidebar h2{
-    animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-    from{
-        text-shadow:0 0 5px var(--gold);
-    }
-    to{
-        text-shadow:0 0 25px var(--gold),
-                    0 0 40px var(--purple);
-    }
-}
-
-/* Dashboard Card */
-.card{
-    position:relative;
-    overflow:hidden;
-}
-
-.card::after{
-    content:"";
-    position:absolute;
-    top:-120%;
-    left:-40%;
-    width:60%;
-    height:300%;
-    background:rgba(255,255,255,.12);
-    transform:rotate(25deg);
-    transition:.8s;
-}
-
-.card:hover::after{
-    left:120%;
-}
-
-/* Button Effect */
-button{
-    position:relative;
-    overflow:hidden;
-}
-
-button::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,.25);
-    transition:.5s;
-}
-
-button:hover::before{
-    left:100%;
-}
-
-/* Sidebar */
-.sidebar a{
-    position:relative;
-}
-
-.sidebar a::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:4px;
-    height:100%;
-    background:var(--gold);
-    transform:scaleY(0);
-    transition:.3s;
-}
-
-.sidebar a:hover::before{
-    transform:scaleY(1);
-}
-
-/* Card Number */
-.card h1{
-    color:var(--gold);
-    font-weight:bold;
-}
-
-/* Footer */
-footer{
-    background:#111;
-    color:#ccc;
-    letter-spacing:1px;
-    }
-/* ===== Premium UI Pack ===== */
-
-/* Card Border Animation */
-.card,
-.plan-card{
-    position:relative;
-    overflow:hidden;
-}
-
-.card::before,
-.plan-card::before{
-    content:"";
-    position:absolute;
-    top:-50%;
-    left:-50%;
-    width:200%;
-    height:200%;
-    background:conic-gradient(
-        transparent,
-        #d4af37,
-        transparent,
-        #5b21b6,
-        transparent
-    );
-    animation:spinBorder 6s linear infinite;
-    opacity:.25;
-}
-
-.card>*,
-.plan-card>*{
-    position:relative;
-    z-index:2;
-}
-
-@keyframes spinBorder{
-    100%{
-        transform:rotate(360deg);
-    }
-}
-
-/* Balance Number */
-.card h1{
-    font-size:48px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-/* Sidebar Hover */
-.sidebar a{
-    transition:.3s;
-}
-
-.sidebar a:hover{
-    transform:translateX(10px);
-}
-
 /* Hero */
-.hero{
-    position:relative;
-    overflow:hidden;
-}
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    background:rgba(212,175,55,.08);
-    top:-200px;
-    right:-150px;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    width:400px;
-    height:400px;
-    border-radius:50%;
-    background:rgba(91,33,182,.12);
-    bottom:-180px;
-    left:-150px;
-}
-
-/* Button */
-button{
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-button:active{
-    transform:scale(.95);
-}
-
-/* Input */
-input{
-    transition:.3s;
-}
-
-input:hover{
-    border:2px solid #5b21b6;
-}
-
-/* Footer */
-footer{
-    box-shadow:0 -5px 20px rgba(0,0,
 .hero{
     text-align:center;
     padding:120px 20px;
+    background:linear-gradient(135deg,#2b1055,#111,#000);
 }
 
 .hero h1{
@@ -534,20 +57,282 @@ footer{
     font-size:22px;
     color:#ccc;
     margin-bottom:30px;
-    line-height:1.8;
 }
 
-.hero button{
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* Buttons */
+
+button{
     background:#5b21b6;
     color:#fff;
     border:none;
-    padding:15px 35px;
+    padding:15px 30px;
     border-radius:10px;
-    font-size:18px;
     cursor:pointer;
+    transition:.3s;
 }
 
-.hero button:hover{
+button:hover{
     background:#d4af37;
     color:#000;
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #d4af37;
+    color:#d4af37;
+}
+
+.btn-outline:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+/* Plans */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:50px;
+}
+
+.plan-card{
+    background:#1b1b1b;
+    border:2px solid #5b21b6;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.plan-card:hover{
+    border-color:#d4af37;
+    transform:translateY(-8px);
+}
+
+.plan-card h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+/* About */
+
+.about{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.about h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#ccc;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Login/Register */
+
+.login-box{
+    width:380px;
+    margin:80px auto;
+    background:#1b1b1b;
+    border:2px solid #d4af37;
+    border-radius:15px;
+    padding:35px;
+}
+
+.login-box h2{
+    color:#d4af37;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    background:#333;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+}
+
+.login-box button{
+    width:100%;
+}
+
+.login-box p{
+    margin-top:15px;
+    text-align:center;
+}
+
+.login-box a{
+    color:#d4af37;
+    text-decoration:none;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#111;
+    border-top:2px solid #5b21b6;
+    color:#bbb;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.plans{
+    grid-template-columns:1fr;
+    padding:20px;
+}
+
+.login-box{
+    width:90%;
+}
+
+    }
+/* ===== PIX PAY Effects ===== */
+
+/* Fade Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero,
+.plan-card,
+.login-box{
+    animation:fadeIn .8s ease;
+}
+
+/* Card Hover */
+.plan-card{
+    box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.plan-card:hover{
+    box-shadow:0 0 25px rgba(212,175,55,.5);
+    transform:translateY(-10px);
+}
+
+/* Button Animation */
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Input */
+.login-box input:focus{
+    outline:none;
+    border:2px solid #d4af37;
+    box-shadow:0 0 10px rgba(212,175,55,.4);
+}
+
+/* Smooth Scroll */
+html{
+    scroll-behavior:smooth;
+    }
+/* ===== Hero Upgrade ===== */
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    text-shadow:0 0 20px rgba(212,175,55,.6);
+}
+
+.hero p{
+    max-width:600px;
+    line-height:1.8;
+}
+
+/* ===== Plan Cards ===== */
+
+.plan-card{
+    padding:30px;
+    transition:0.3s ease;
+}
+
+.plan-card h3{
+    font-size:28px;
+}
+
+.plan-card p{
+    margin:15px 0;
+    color:#ccc;
+    font-size:18px;
+}
+
+.plan-card button{
+    width:100%;
+    margin-top:15px;
+}
+
+/* ===== Footer ===== */
+
+footer{
+    margin-top:60px;
+    font-size:15px;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.plan-card h3{
+    font-size:24px;
+}
+
     }
