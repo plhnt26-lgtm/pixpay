@@ -1,50 +1,80 @@
-function register() {
+/* ===== PIX PAY NEW THEME ===== */
 
-    const fullname = document.getElementById("fullname").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (fullname === "" || email === "" || password === "") {
-        alert("Please fill all fields.");
-        return;
-    }
-
-    const user = {
-        fullname,
-        email,
-        password
-    };
-
-    localStorage.setItem("user", JSON.stringify(user));
-
-    alert("Registration Successful!");
-
-    window.location.href = "login.html";
+body{
+    background:#0b0b0f;
+    color:#fff;
 }
 
-function login() {
+header{
+    background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
+    padding:20px 30px;
+}
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+header h1{
+    color:#fff;
+}
 
-    const user = JSON.parse(localStorage.getItem("user"));
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
 
-    if (!user) {
-        alert("No account found. Please register first.");
-        return;
-    }
+nav a:hover{
+    color:#d4af37;
+}
 
-    if (email === user.email && password === user.password) {
+.hero{
+    background:linear-gradient(135deg,#2b1055,#111,#000);
+    color:#fff;
+    text-align:center;
+    padding:100px 20px;
+}
 
-        localStorage.setItem("loggedIn", "true");
+.hero h1{
+    color:#d4af37;
+    font-size:60px;
+}
 
-        alert("Login Successful!");
+.hero p{
+    color:#ddd;
+}
 
-        window.location.href = "dashboard.html";
+.login-box,
+.card,
+.plan-card{
+    background:#181818;
+    border:2px solid #d4af37;
+    color:#fff;
+    border-radius:18px;
+}
 
-    } else {
+button{
+    background:#5b21b6;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+}
 
-        alert("Invalid Email or Password");
+button:hover{
+    background:#d4af37;
+    color:#000;
+}
 
-    }
-    }
+input{
+    background:#222;
+    color:#fff;
+    border:1px solid #444;
+}
+
+input:focus{
+    border:2px solid #d4af37;
+}
+
+footer{
+    background:#111;
+    color:#fff;
+    border-top:2px solid #d4af37;
+    padding:20px;
+}
