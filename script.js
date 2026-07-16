@@ -348,3 +348,26 @@ footer{
 .topbar{
     flex-direction:column
     
+function register(){
+
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if(fullname==="" || email==="" || password===""){
+        alert("Please fill all fields.");
+        return;
+    }
+
+    const user={
+        fullname:fullname,
+        email:email,
+        password:password
+    };
+
+    localStorage.setItem("user",JSON.stringify(user));
+
+    alert("Registration Successful!");
+
+    window.location.href="login.html";
+   }
