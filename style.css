@@ -1,415 +1,50 @@
-/* ===== PIX PAY STYLE ===== */
+function register() {
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-body{
-    background:#0d0d0d;
-    color:#fff;
-}
-
-/* Sidebar */
-
-.sidebar{
-    position:fixed;
-    left:0;
-    top:0;
-    width:250px;
-    height:100vh;
-    background:#111;
-    border-right:2px solid #d4af37;
-    padding-top:30px;
-}
-
-.sidebar h2{
-    text-align:center;
-    color:#d4af37;
-    margin-bottom:30px;
-}
-
-.sidebar a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
-    padding:16px 25px;
-    transition:.3s;
-}
-
-.sidebar a:hover{
-    background:#5b21b6;
-    color:#d4af37;
-}
-
-/* Main */
-
-.main-content{
-    margin-left:250px;
-    padding:30px;
-}
-
-/* Topbar */
-
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#1b1b1b;
-    border:2px solid #d4af37;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:30px;
-}
-
-.topbar h2{
-    color:#d4af37;
-}
-
-.user-box{
-    background:#5b21b6;
-    padding:10px 20px;
-    border-radius:10px;
-}
-
-/* Dashboard Cards */
-
-.dashboard{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:linear-gradient(145deg,#1d1d1d,#2b1055);
-    border:2px solid #d4af37;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 20px rgba(212,175,55,.4);
-}
-
-.card h3{
-    color:#d4af37;
-    margin-bottom:15px;
-}
-
-.card h1{
-    font-size:40px;
-}
-
-/* Buttons */
-
-button{
-    background:#5b21b6;
-    color:#fff;
-    border:none;
-    padding:15px 30px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    background:#d4af37;
-    color:#000;
-}
-
-/* Quick Actions */
-
-.quick-actions{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:30px;
-}
-
-/* Login */
-
-.login-box{
-    width:380px;
-    margin:80px auto;
-    background:#1b1b1b;
-    padding:35px;
-    border-radius:15px;
-    border:2px solid #d4af37;
-}
-
-.login-box h2{
-    text-align:center;
-    margin-bottom:25px;
-    color:#d4af37;
-}
-
-.login-box input{
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    background:#333;
-    color:#fff;
-    border:none;
-    border-radius:8px;
-}
-
-.login-box button{
-    width:100%;
-    margin-top:15px;
-}
-
-/* Hero */
-
-.hero{
-    text-align:center;
-    padding:120px 20px;
-}
-
-.hero h1{
-    font-size:60px;
-    color:#d4af37;
-}
-
-.hero p{
-    margin-top:15px;
-    font-size:20px;
-    color:#ccc;
-}
-
-/* Plans */
-
-.plans{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:50px;
-}
-
-.plan-card{
-    background:#1b1b1b;
-    border:2px solid #5b21b6;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    transition:.3s;
-}
-
-.plan-card:hover{
-    border-color:#d4af37;
-    transform:translateY(-8px);
-}
-
-.plan-card h3{
-    color:#d4af37;
-}
-
-/* Footer */
-
-footer{
-    margin-top:60px;
-    text-align:center;
-    padding:25px;
-    border-top:2px solid #5b21b6;
-    color:#bbb;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.sidebar{
-    width:100%;
-    height:auto;
-    position:relative;
-}
-
-.main-content{
-    margin-left:0;
-}
-
-.topbar{
-    flex-direction:column;
-    gap:15px;
-}
-
-.dashboard{
-    grid-template-columns:1fr;
-}
-
-.plans{
-    grid-template-columns:1fr;
-}
-
-.quick-actions{
-    flex-direction:column;
-}
+    if (fullname === "" || email === "" || password === "") {
+        alert("Please fill all fields.");
+        return;
     }
-/* Header */
 
-header{
-    background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
+    const user = {
+        fullname,
+        email,
+        password
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    alert("Registration Successful!");
+
+    window.location.href = "login.html";
 }
 
-header h1{
-    color:#fff;
-    font-size:34px;
-}
+function login() {
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-nav a:hover{
-    color:#d4af37;
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+        alert("No account found. Please register first.");
+        return;
     }
-/* Main Content White */
 
-.hero,
-.plans,
-.about{
-    background:#ffffff;
-    color:#222;
-}
+    if (email === user.email && password === user.password) {
 
-/* Hero */
+        localStorage.setItem("loggedIn", "true");
 
-.hero h1{
-    color:#5b21b6;
-}
+        alert("Login Successful!");
 
-.hero p{
-    color:#555;
-}
+        window.location.href = "dashboard.html";
 
-/* Plan Cards */
+    } else {
 
-.plan-card{
-    background:#ffffff;
-    color:#222;
-    border:2px solid #5b21b6;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
+        alert("Invalid Email or Password");
 
-.plan-card p{
-    color:#555;
-}
-
-.plan-card:hover{
-    border-color:#d4af37;
-    transform:translateY(-8px);
-}
-
-/* About */
-
-.about h2{
-    color:#5b21b6;
-}
-
-.about p{
-    color:#555;
-}
-
-/* Footer */
-
-footer{
-    background:#111;
-    color:#fff;
-}
-/* ===== Modern Header ===== */
-
-header{
-    background:linear-gradient(90deg,#5b21b6,#111,#d4af37);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,.3);
-}
-
-header h1{
-    color:#fff;
-    font-size:32px;
-    font-weight:bold;
-}
-
-nav{
-    display:flex;
-    gap:20px;
-    align-items:center;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:17px;
-    font-weight:bold;
-    padding:8px 15px;
-    border-radius:8px;
-    transition:.3s;
-}
-
-nav a:hover{
-    background:#5b21b6;
-    color:#d4af37;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    padding:20px;
-}
-
-header h1{
-    margin-bottom:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-}
-
-nav a{
-    font-size:15px;
-    padding:8px 12px;
-}
-
-}
-/* Hero Buttons */
-
-.hero-buttons{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn-outline{
-    background:transparent;
-    border:2px solid #5b21b6;
-    color:#5b21b6;
-}
-
-.btn-outline:hover{
-    background:#5b21b6;
-    color:#fff;
-}
+    }
+    }
