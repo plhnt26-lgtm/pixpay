@@ -633,6 +633,12 @@ table tr:hover{
 }
 
 .main-content{
+    margin-left:0;
+    width:100%;
+    padding:15px;
+}
+
+.main-content{
     margin-left:260px;
     width:calc(100% - 260px);
     padding:30px;
